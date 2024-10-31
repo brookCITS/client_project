@@ -1,3 +1,5 @@
+
+
 .gallery {
   position: relative;
   width: 100%;
@@ -49,31 +51,31 @@
     padding: 40px;
     font-size: 1.15rem;
     padding: 5vw;
-    width: fit-content;
+    width: 50vw;
     height: 35vw;
     p {
-      font-family: "Inconsolata", sans-serif;
+      font-family: "Raleway", sans-serif;
       font-optical-sizing: auto;
       font-weight: 200;
       will-change: transform;
+      @media screen and (max-width: @md) {
+        font-size: 0.8rem;      
+      }
     }
 
     h1 {
       font-family: "Montserrat", sans-serif;
-      font-size: 4rem;
+      font-size: calc(2vmin + 4rem);
       font-optical-sizing: auto;
       font-weight: 300;
       font-style: italic;
       will-change: transform;
+      @media screen and (max-width: @md) {
+        font-size: 2rem;
+      }
     }
     @media screen and (max-width: @md) {
       height: 65vh;
-      h1{
-        font-size: 2rem;
-      }
-      p{
-        font-size: 0.8rem;
-      }
     }
   }
   &--switch{
@@ -81,12 +83,10 @@
     .gallery{
       &-item{
         grid-area: 1 / 1 / 2 / 2;
-        &:nth-child(2){
-          margin-left: calc(var(--offset) );
-        }
+        
 
         // Apply a staggered margin based on the item's index
-        .mixin-stagger(@n, @offset) when (@n > 2) {
+        .mixin-stagger(@n, @offset) when (@n > 0) {
           &:nth-child(@{n}) {
             margin-left: calc(var(--offset) * @n);
           }

@@ -22,8 +22,6 @@ interface GalleryProps {
 const Gallery: React.FC<GalleryProps> = ({ items, caption }) => {
   const galleryRef = useRef<HTMLDivElement | null>(null);
   const id = "gallery-stack";
-  const { width, height } = useWindowDimensions();
-  const stopGap = width / (items.length + 1);
 
   useGSAP(
     () => {
@@ -39,23 +37,24 @@ const Gallery: React.FC<GalleryProps> = ({ items, caption }) => {
         
         Flip.to(state, {
           ease: 'none',
-          absoluteOnLeave: false,
-          absolute: false,
+          absoluteOnLeave: true,
+          //absolute: false,
           scale: true,
-          simple: true,
+          //simple: true,
           scrollTrigger: {
             trigger: el,
-            start: "top 70px",
+            start: "center center",
             end: '+=300%',
             pin: true,
-            markers: true,
+            markers: false,
             scrub: true,
+            anticipatePin: 1
           },
           stagger: 0
         });
       
         return () => {
-          gsap.set(flipItems, { clearProps: "transform" });
+          gsap.set(flipItems, { clearProps: "transform, position" });
         };
         
       }

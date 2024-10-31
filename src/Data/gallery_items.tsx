@@ -55,15 +55,29 @@ const CarouselItems = [
     {
         images: [
             'images/carousel/water_park_0.JPG',
-            'images/carousel/water_park_1.JPG',
+            'https://kurifturesorts.com/_nuxt/img/ExpLong.394f0cf.webp',
             'images/carousel/water_park_3.JPG',
-            'images/carousel/water_park_4.JPG',
+            'https://kurifturesorts.com/_nuxt/img/2.cba8b20.webp',
             'images/carousel/water_park_5.JPG',
             'images/carousel/water_park_6.JPG',
         ],
         caption: {
             header: 'Discover extraordinary destinations',
-            text: "Absorb the unique beauty of Ethiopia's natural landscapes and prominent cultural heritage"
+            text: "Absorb the unique beauty of Ethiopia's natural landscapes and prominent cultural heritage."
+        }
+    },
+    {
+        images: [
+            'https://kurifturesorts.com/_nuxt/img/2.cba8b20.webp',
+            'https://kurifturesorts.com/_nuxt/img/GardenView.eb2af55.webp',
+            'https://kurifturesorts.com/_nuxt/img/LakeView.2b96574.webp',
+            'images/carousel/water_park_1.JPG',
+            'images/carousel/water_park_4.JPG',
+            'images/carousel/water_park_6.JPG',
+        ],
+        caption: {
+            header: 'Restore your energy',
+            text: "Escape to a refuge of tranquility - nestled in the core of any of the Kuriftu locations is a center for wellness and relaxation."
         }
     },
     {
@@ -76,36 +90,8 @@ const CarouselItems = [
             'images/carousel/water_park_6.JPG',
         ],
         caption: {
-            header: 'Discover extraordinary destinations',
-            text: "Absorb the unique beauty of Ethiopia's natural landscapes and prominent cultural heritage"
-        }
-    },
-    {
-        images: [
-            'images/carousel/water_park_0.JPG',
-            'images/carousel/water_park_1.JPG',
-            'images/carousel/water_park_3.JPG',
-            'images/carousel/water_park_4.JPG',
-            'images/carousel/water_park_5.JPG',
-            'images/carousel/water_park_6.JPG',
-        ],
-        caption: {
-            header: 'Discover extraordinary destinations',
-            text: "Absorb the unique beauty of Ethiopia's natural landscapes and prominent cultural heritage"
-        }
-    },
-    {
-        images: [
-            'images/carousel/water_park_0.JPG',
-            'images/carousel/water_park_1.JPG',
-            'images/carousel/water_park_3.JPG',
-            'images/carousel/water_park_4.JPG',
-            'images/carousel/water_park_5.JPG',
-            'images/carousel/water_park_6.JPG',
-        ],
-        caption: {
-            header: 'Discover extraordinary destinations',
-            text: "Absorb the unique beauty of Ethiopia's natural landscapes and prominent cultural heritage"
+            header: 'Commitment To Exceptional Service',
+            text: "From culinary experiences to accommodations insprired by tradition and international luxury standards, indulge yourself!"
         }
     }
 ]

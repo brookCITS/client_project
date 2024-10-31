@@ -50,7 +50,7 @@ export default function ButtonAppBar() {
        <Container className="navbar-content" fluid>
         <Navbar.Toggle className='navbar-hambergure' aria-controls={'offcanvasNavbar-expand-false'} />
         <img id="logo" src={require('../../assessts/svg/logo.svg').default} alt='kuriftu logo' />
-        <Button id="login-button">Login</Button>
+        <Button id="login-button">BOOK</Button>
         <Navbar.Offcanvas
             id='offcanvasNavbar-expand-false'
             aria-labelledby='offcanvasNavbarLabel-expand-false'
