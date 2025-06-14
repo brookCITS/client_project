@@ -1,0 +1,20 @@
+# Exclude environment files
+.env
+
+# Node.js specific (for frontend services)
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Python specific (for backend services)
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# General files to exclude
+.git
+.gitignore
+Dockerfile
+README.md

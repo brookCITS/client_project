@@ -49,6 +49,39 @@
     }
 }
 
+
+.tile{
+    &-small{
+        border-radius: 4px;
+        margin-bottom: 30px;
+        width: 195px;
+        background-color: @light;
+        padding: 15px 15px 0;
+        display: flex;
+        justify-content: space-between;
+        &-icon{
+            color: @primary-dark;
+        }
+        &-text{
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+            color: @dark;
+            text-align: right;
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                color: @gray;
+            }
+            h1{
+                color: @dark;
+                font-family: helvetica neue;
+            }
+        }
+    }
+
+}
+
 /* for mobile */
 @media screen and (max-width: 600px) {
     .card{

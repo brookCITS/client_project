@@ -6,16 +6,43 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App';
-import LandingPage from './Routes/landing';
+
+//auth routes
+import LoginPage from './Routes/auth/login';
+import SignupPage from './Routes/auth/register';
+import VerifyEmailPage from './Routes/auth/verifyEmail';
+import ForgotPasswordPage from './Routes/auth/forgotPassword';
+import ResetPasswordPage from './Routes/auth/resetPassword';
+
+//dahsboard routes
+import LandingPage from './Routes/dashboard/landing';
+import Bookings from './Routes/dashboard/booking';
 import ContactUsPage from './Routes/contact';
 import ErrorPage from './Routes/error';
 
 
 
-
-
-
 const router = createBrowserRouter([
+  {
+    path: "/login",
+    element:  <LoginPage/>,
+  },
+  {
+    path: "/register",
+    element:  <SignupPage/>,
+  },
+  {
+    path: "/forgot-password",
+    element:  <ForgotPasswordPage/>,
+  },
+  {
+    path: "/reset-password",
+    element:  <ResetPasswordPage/>,
+  },
+  {
+    path: "/verify-email",
+    element:  <VerifyEmailPage/>,
+  },
   {
     path: "/",
     element:  <App />,
@@ -26,10 +53,17 @@ const router = createBrowserRouter([
         element:  <LandingPage/>,
       },
       {
-        //contactus
-         path: "/contact",
-        element:  <ContactUsPage/>,
-      }
+        path: "/profile",
+        element:  <LandingPage/>,
+      },
+      {
+        path: "/bookings",
+        element:  <Bookings/>,
+      },
+      {
+        path: "/settings",
+        element:  <LandingPage/>,
+      },
     ]
   },
 ]);
