@@ -1,11 +1,14 @@
 # deploy.yml template
 name: Deploy
+
 on:
   push:
     branches: [test, prod]
+
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
         steps:
       - name: Checkout code
@@ -38,18 +41,9 @@ jobs:
       - name: Upload to Server
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.CPANEL_HOST }}
-          username: ${{ secrets.CPANEL_USERNAME }}
-          password: ${{ secrets.CPANEL_PASSWORD }}
-          local-dir: build/
-          server-dir: /${{ github.ref_name }}/
-
-      - uses: actions/checkout@v4
-      - run: npm ci && npm run build
-      - uses: SamKirkland/FTP-Deploy-Action@v4
-        with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
-          server-dir: /
+          server-dir: /${{ github.ref_name }}/
+          
